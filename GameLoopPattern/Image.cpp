@@ -488,9 +488,9 @@ void Image::FrameRender(HDC hdc, int destX, int destY)
 			_imageInfo->frameHeight,
 			_imageInfo->hMemDC,
 			_imageInfo->currentframeX * _imageInfo->frameWidth,
-			_imageInfo->currentframeX * _imageInfo->frameHeight,
-			_imageInfo->width,
-			_imageInfo->height,
+			_imageInfo->currentframeY * _imageInfo->frameHeight,
+			_imageInfo->frameWidth,
+			_imageInfo->frameHeight,
 			_transColor
 		);
 	}
@@ -505,7 +505,7 @@ void Image::FrameRender(HDC hdc, int destX, int destY)
 			_imageInfo->frameHeight,
 			_imageInfo->hMemDC,
 			_imageInfo->currentframeX * _imageInfo->frameWidth,
-			_imageInfo->currentframeX * _imageInfo->frameHeight,
+			_imageInfo->currentframeY * _imageInfo->frameHeight,
 			SRCCOPY
 		);
 	}
